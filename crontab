@@ -1,0 +1,6 @@
+# 全量备份
+1 0 * * *     /bin/bash /opt/mysql-data-backup/dbbak/bakdb.sh full
+# 第一次增量备份
+1 1 * * *     /bin/bash /opt/mysql-data-backup/dbbak/bakdb.sh incremental first
+# 其他时间段增量备份
+1 2-23 * * *  /bin/bash /opt/mysql-data-backup/dbbak/bakdb.sh incremental
